@@ -1,8 +1,13 @@
-using AssetTrack.Data;
+﻿using AssetTrack.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<AssetTrackContext>(options =>
+
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AssetTrackContext")));
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
