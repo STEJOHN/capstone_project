@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace AssetTrack.Controllers
 {
+
     public class AssetsController : Controller
     {
         private readonly AssetTrackContext _context;
@@ -28,6 +29,7 @@ namespace AssetTrack.Controllers
             return View(await _context.Asset.ToListAsync());
         }
 
+        [Authorize]
         // GET: Assets/Details/
         public async Task<IActionResult> Details(int? id)
         {
@@ -160,5 +162,6 @@ namespace AssetTrack.Controllers
         {
             return _context.Asset.Any(e => e.Id == id);
         }
+
     }
 }

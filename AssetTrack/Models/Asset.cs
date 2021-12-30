@@ -7,9 +7,9 @@ namespace AssetTrack.Models
     public class Asset
     {
         public int Id { get; set; }
-        
-        [DataType(DataType.DateTime)]
-        public DateTime Date { get; set; } = DateTime.Now;
+
+       
+        public DateTime Date { get; set; }
         public string Location { get; set; }
 
         [DisplayName("Part Type")]
@@ -28,10 +28,7 @@ namespace AssetTrack.Models
 
         public string Notes { get; set; }
         public string User { get; set; }
-
-        public Asset()
-        {
-
-        }
+       
+        
     }
 }
