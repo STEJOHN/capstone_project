@@ -21,6 +21,8 @@ namespace AssetTrack.Controllers
         {
             _context = context;
         }
+
+
         // Requires user auth to proceed with view
         [Authorize]
         // GET: Assets/Index/
