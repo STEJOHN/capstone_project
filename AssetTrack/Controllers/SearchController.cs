@@ -49,7 +49,6 @@ namespace AssetTrack.Controllers
             }
 
 
-            //return View(await _context.Things.ToListAsync());
             return View(await assets.ToListAsync());
         }
 

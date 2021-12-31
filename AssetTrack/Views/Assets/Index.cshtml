@@ -7,11 +7,15 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Inventory Index</h1>
+<br />
+<br />
+
 
 <p>
     <a asp-action="Create"><input class="btn btn-primary" value="Create New" ></a>
 </p>
+<form asp-controller="Assets" asp-action="Index" method="get"></form>
 <table class="table table-hover">
     <thead>
         <tr>
@@ -34,7 +38,7 @@
                 @Html.DisplayNameFor(model => model.SerialNumber)
             </th>
               <th>
-               @Html.DisplayNameFor(model => model.TaskNumber)
+                @Html.DisplayNameFor(model => model.TaskNumber)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Notes)               
@@ -50,7 +54,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr class="table-active">
+        <tr class="table-Secondary">
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
