@@ -1,7 +1,4 @@
 ﻿@model AssetTrack.Models.Asset
-@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
 
 @{
     ViewData["Title"] = "Create";
@@ -58,7 +55,7 @@
                 <span asp-validation-for="Notes" class="text-danger"></span>
             </div>
             <div class="form-group">              
-                <input type="hidden" asp-for="User" value ='@User.Identity?.Name' class="form-control" />
+                <input type="hidden" asp-for="User" value ='@User.Identity.Name' class="form-control" />
                 <span asp-validation-for="User" class="text-danger"></span>
             </div>
             <div class="form-group">
