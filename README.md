@@ -51,8 +51,14 @@ If you are experiencing issues with connecting to SQL Server, please verify the 
   }
 }
 ```
+## Demo app on the web
+You can try a demo version of the app on Azure [here](https://assettrackapp.azurewebsites.net/)
+Please create an account or login using the following credentials :
 
-
+```
+Username : user@assettrackapp.com
+Password : Temp123!
+```
 
 
 
